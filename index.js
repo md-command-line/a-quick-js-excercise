@@ -3,7 +3,7 @@ export default class CleverArray {
     this.array = args
   }
 
-  sum(){
+  get sum(){
     return this.validArray()
       ? this.array.reduce( (accum, x) => accum + x )
       : NaN
@@ -15,8 +15,8 @@ export default class CleverArray {
       : NaN
   }// alternate implementation //  args.map(x => (this.array.push(x), x))
 
-  average(){
-    return this.sum()/this.array.length
+  get average(){
+    return this.sum/this.array.length
   }
 
   validArray(...args){

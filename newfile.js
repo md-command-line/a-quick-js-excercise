@@ -4,6 +4,7 @@ import CleverArray from './index';
 
 const cleverArray = new CleverArray(1, 2, 3, 4);
 console.log(cleverArray.sum())
+console.log(cleverArray.average())
 
 
 // non-babel implementation

@@ -22,26 +22,26 @@ describe('CleverArray is so smart it can even', () => {
 
     it('an empty array', () => {
       const cleverArray = new CleverArray();
-      assert.ok(isNaN(cleverArray.sum));
+      assert.ok(isNaN(cleverArray.sum()));
     });
   });
 
   describe('#average', () => {
-    xit('all array items', () => {
+    it('all array items', () => {
       const cleverArray = new CleverArray(1, 2, 3, 4);
-      assert.equal(cleverArray.average, 2.5);
+      assert.equal(cleverArray.average(), 2.5);
     });
 
-    xit('with updates to the array', () => {
+    it('with updates to the array', () => {
       const cleverArray = new CleverArray(1, 2, 3);
-      assert.equal(cleverArray.average, 2);
+      assert.equal(cleverArray.average(), 2);
       cleverArray.push(4, 5);
-      assert.equal(cleverArray.average, 3);
+      assert.equal(cleverArray.average(), 3);
     });
 
-    xit('an empty array', () => {
+    it('an empty array', () => {
       const cleverArray = new CleverArray();
-      assert.ok(isNaN(cleverArray.average));
+      assert.ok(isNaN(cleverArray.average()));
     });
   });
 });

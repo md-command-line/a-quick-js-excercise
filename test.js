@@ -20,7 +20,7 @@ describe('CleverArray is so smart it can even', () => {
       assert.equal(cleverArray.sum(), 15);
     });
 
-    xit('an empty array', () => {
+    it('an empty array', () => {
       const cleverArray = new CleverArray();
       assert.ok(isNaN(cleverArray.sum));
     });

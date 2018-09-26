@@ -2,12 +2,18 @@ export default class CleverArray {
   constructor(...args){
     this.array = args
   }
+
   sum(){
-    return this.array.reduce( (accum, x) => accum + x )
+    return this.validArray() ? this.array.reduce( (accum, x) => accum + x ) : NaN
   }
+
   push(...args){
-    this.array = this.array.concat(args)
+    return this.array = this.validArray(args) ? this.array.concat(args) : NaN
     // args.map(x => (this.array.push(x), x))
+  }
+
+  validArray(...args){
+    return this.array.length > 0 || args.length > 0
   }
 }
 

@@ -13,11 +13,11 @@ describe('CleverArray is so smart it can even', () => {
       assert.equal(cleverArray.sum(), 10);
     });
 
-    xit('with updates to the array', () => {
+    it('with updates to the array', () => {
       const cleverArray = new CleverArray(1, 2, 3);
-      assert.equal(cleverArray.sum, 6);
+      assert.equal(cleverArray.sum(), 6);
       cleverArray.push(4, 5);
-      assert.equal(cleverArray.sum, 15);
+      assert.equal(cleverArray.sum(), 15);
     });
 
     xit('an empty array', () => {
